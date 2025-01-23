@@ -14,7 +14,6 @@
 #   $@                          Pass any arguments to the container
 
 docker run \
-    -d \
     --rm \
     --volume .:/app \
     --volume /app/.venv \

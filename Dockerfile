@@ -28,6 +28,7 @@ ENV PATH="/app/.venv/bin:$PATH"
 # Reset the entrypoint, don't invoke `uv`
 ENTRYPOINT []
 
-# Run the FastAPI application by defaultuv python install 3.12
+COPY src/ /app/src/
 
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]
+# Run the FastAPI application by default
+CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "80"]
